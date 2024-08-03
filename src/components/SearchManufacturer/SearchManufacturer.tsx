@@ -10,7 +10,8 @@ import {
 import Image from "next/image";
 import { ChangeEvent, useState, Fragment } from "react";
 import { manufacturers } from "@/constants";
-const SearchManufacturer = ({
+
+const SearchManufacturer = async ({
   manufacturer,
   setManufacturer,
 }: {
@@ -18,6 +19,7 @@ const SearchManufacturer = ({
   manufacturer: string;
 }) => {
   const [query, setQuery] = useState("");
+
   const filteredManufactures =
     query === ""
       ? manufacturers
