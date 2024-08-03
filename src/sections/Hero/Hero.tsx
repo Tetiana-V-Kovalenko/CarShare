@@ -1,7 +1,7 @@
 "use client";
-import CustomButton from "@/components/Button";
 import { useEffect } from "react";
 import Image from "next/image";
+import Button from "@/components/Button";
 
 export default function Hero() {
   useEffect(() => {
@@ -18,7 +18,7 @@ export default function Hero() {
           Streamline your car rental experience with our effortless booking
           process.
         </p>
-        <CustomButton
+        <Button
           title={"Explore Cars"}
           className=" bg-primary-blue text-white rounded-full mt-10"
         />

@@ -8,7 +8,7 @@ type ButtonProps = {
   onClick?: MouseEventHandler<HTMLButtonElement>;
 };
 
-const CustomButton = ({
+const Button = ({
   title,
   className,
   type = "button",
@@ -27,4 +27,4 @@ const CustomButton = ({
   );
 };
 
-export default CustomButton;
+export default Button;
