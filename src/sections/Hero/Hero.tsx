@@ -20,7 +20,7 @@ export default function Hero() {
         </p>
         <Button
           title={"Explore Cars"}
-          className=" bg-primary-blue text-white rounded-full mt-10"
+          className=" bg-primary-blue text-white rounded-full mt-10 justify-center"
         />
       </div>
       <div className="hero__image-container ">

@@ -13,7 +13,7 @@ export type SelectProps = {
   container?: MutableRefObject<HTMLDivElement | null>;
 };
 const Select = ({
-  variant,
+  variant = "default",
   ...restProps
 }: { variant: string } & SelectProps) => {
   const ReqiredVariant = selectComponents.get(variant);

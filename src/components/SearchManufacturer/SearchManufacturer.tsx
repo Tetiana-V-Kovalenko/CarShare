@@ -11,7 +11,7 @@ import Image from "next/image";
 import { ChangeEvent, useState, Fragment } from "react";
 import { manufacturers } from "@/constants";
 
-const SearchManufacturer = async ({
+const SearchManufacturer = ({
   manufacturer,
   setManufacturer,
 }: {

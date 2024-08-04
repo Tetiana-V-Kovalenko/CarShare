@@ -24,12 +24,12 @@ const Navbar = () => {
           <Button
             title={"Sign In"}
             type="button"
-            className="text-primary-blue rounded-full bg-blue-100 min-w-[130px] hover:bg-blue-300"
+            className="text-primary-blue rounded-full bg-blue-100 min-w-[130px] hover:bg-blue-300 justify-center"
           ></Button>
           <Button
             title={"Sign Up"}
             type="button"
-            className="bg-primary-blue rounded-full text-white min-w-[130px] hover:bg-blue-300"
+            className="bg-primary-blue rounded-full text-white min-w-[130px] hover:bg-blue-300 justify-center"
           ></Button>
         </div>
       </nav>

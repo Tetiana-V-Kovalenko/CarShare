@@ -1,4 +1,4 @@
-const url = "https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?model=corolla";
+const url = "https://api.api-ninjas.com/v1/cars?limit=2&model=camry";
 const options = {
   method: "GET",
   headers: {
@@ -6,13 +6,11 @@ const options = {
     "x-rapidapi-host": "cars-by-api-ninjas.p.rapidapi.com",
   },
 };
-export const getCars = async (query?: string) => {
-  try {
-    const response = await fetch(url, options);
-    const result = await response.json();
-    console.log(result);
-    return result;
-  } catch (error) {
-    console.error(error);
-  }
-};
+// export const getCars = async (query?: string) => {
+//   const response = await fetch(url, {
+//     headers: { "X-Api-Key": "YOUR_API_KEY" },
+//   });
+//   const result = await response.json();
+
+//   return result;
+// };

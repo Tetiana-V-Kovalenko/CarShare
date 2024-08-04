@@ -1,7 +1,9 @@
-"use client";
 import SearchBar from "@/components/SearchBar";
+import Select from "@/components/Select";
+import { cars } from "@/mocks";
+import Catalogue from "@/sections/Catalogue";
 import Hero from "@/sections/Hero";
-import { getCars } from "@/service";
+// import { getCars } from "@/service";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +19,11 @@ export default async function Home() {
         </div>
         <div className="home__filters">
           <SearchBar />
+          <div className="">
+            <Select variant="default"></Select>
+          </div>
         </div>
+        <Catalogue cars={cars}></Catalogue>
       </div>
     </main>
   );
