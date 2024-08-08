@@ -6,10 +6,12 @@ import { calculateCarRent } from "@/utils/calculateCarRent";
 import Image from "next/image";
 import { useState } from "react";
 import CarDetails from "../CarDetails";
+import { generateCarImageUrl } from "@/utils/generateCarImage";
 
 export const CarCard = ({ car }: { car: TCar }) => {
   const [isOpen, setIsOpen] = useState(false);
   const carRent = calculateCarRent(car.city_mpg, car.year);
+
   return (
     <div className="car-card group">
       <div className="car-card__content">
@@ -24,7 +26,7 @@ export const CarCard = ({ car }: { car: TCar }) => {
       </p>
       <div className=" relative w-full h-40 my-3 object-contain">
         <Image
-          src={"/hero.png"}
+          src={generateCarImageUrl(car)}
           alt="car"
           fill
           priority

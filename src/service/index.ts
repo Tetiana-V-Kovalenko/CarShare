@@ -1,4 +1,3 @@
-const url = "https://api.api-ninjas.com/v1/cars?limit=2&model=camry";
 const options = {
   method: "GET",
   headers: {
@@ -6,11 +5,29 @@ const options = {
     "x-rapidapi-host": "cars-by-api-ninjas.p.rapidapi.com",
   },
 };
-// export const getCars = async (query?: string) => {
-//   const response = await fetch(url, {
-//     headers: { "X-Api-Key": "YOUR_API_KEY" },
-//   });
-//   const result = await response.json();
+export type FilterProps = {
+  manufacturer: string;
+  year: number;
+  fuel: string;
+  limit: number;
+  model: string;
+};
+export const getCars = async (
+  filters: FilterProps = {
+    manufacturer: "string",
+    year: 2022,
+    fuel: "",
+    limit: 10,
+    model: "",
+  }
+) => {
+  const response = await fetch(
+    `https://cars-by-api-ninjas.p.rapidapi.com/v1/cars?make=${filters?.manufacturer}&year=${filters?.year}&model=${filters?.model}&limit=${filters.limit}&fuel_type=${filters.fuel}`,
+    {
+      headers: options.headers,
+    }
+  );
+  const result = await response.json();
 
-//   return result;
-// };
+  return result;
+};
